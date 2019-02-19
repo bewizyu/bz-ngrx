@@ -10,12 +10,10 @@ import {metaReducers, reducers} from './reducers';
 import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './app.effects';
 import {BzCoreModule} from '../core/bz.core.module';
-import {NetworkContainerComponent} from '../core/features/network/components/network.container';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NetworkContainerComponent
   ],
   imports: [
     BrowserModule,

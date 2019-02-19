@@ -21,7 +21,9 @@ export const COMPONENTS = [
     ]),
   ],
   declarations: COMPONENTS,
-  exports: [],
+  exports: [
+    ...COMPONENTS,
+  ],
 })
 export class BzCoreModule {
 }

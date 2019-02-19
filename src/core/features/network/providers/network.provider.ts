@@ -12,6 +12,7 @@ import {NetworkState} from '../store/network.reducer';
 export class NetworkProvider {
 
   constructor(private store: Store<NetworkState>) {
+    this.handleConnectivityEvent = this.handleConnectivityEvent.bind(this);
   }
 
   public getNetworkStatus() {
@@ -39,6 +40,6 @@ export class NetworkProvider {
   }
 
   private handleConnectivityEvent(event) {
-    console.log('EVENT', event);
+    this.store.dispatch(new StatusChangeSuccess({status: event.type}));
   }
 }
